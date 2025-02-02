@@ -18,3 +18,10 @@ Ruokareseptisovellus
 
 -Käyttäjä pystyy antamaan reseptille kommentin ja arvosanan. Reseptistä näytetään kommentit ja keskimääräinen arvosana.
 
+Välipalautus 1:
+Sovelluksen nykyominaisuudet:
+-Käyttäjä pystyy luomaan tunnuksen ja kirjautumaan sisään sovellukseen.
+-Käyttäjä pystyy lisäämään, muokkaamaan ja poistamaan tietokohteita.
+-Käyttäjä näkee sovellukseen lisätyt tietokohteet.
+
+
