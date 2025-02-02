@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>RecipeApp</title>
+</head>
+
+<body>
+  <h1>RecipeApp</h1>
+
+  {% if session.user_id %}
+  <p>
+    You are signed in as: {{ session.username }}
+  </p>
+  <p>
+    <a href="/logout">Sign out</a>
+  </p>
+  {% else %}
+
+  <form action="/login" method="post">
+    <p>
+      Username: <br />
+      <input type="text" name="username" />
+    </p>
+    <p>
+      Password: <br />
+      <input type="password" name="password" />
+    </p>
+    <input type="submit" value="Log in" /> |
+    <a href="/register">Register</a> 
+  </form>
+  {% endif %}
+
+  {% if session.user_id %}
+  <a href="/profile">My recipes</a> |
+  <a href="/new">Add a new recipe</a>
+  {% endif %}
+
+  <h2>Recipes:</h2>
+
+  <hr />
+  {% for recipe in recipes %}
+  <p>
+    <a href="/recipe/{{ recipe.id }}">{{ recipe.recipe_name }}</a>
+  </p>
+  <hr />
+  {% endfor %}
+  
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RecipeApp</title>
+</head>
+
+<body>
+  <p>
+    Recipe name: {{recipe.recipe_name}}
+  </p>
+  <p>
+    Ingredients: {{recipe.ingredients}}
+  </p>
+  <p>
+    Instructions: {{recipe.instructions}}
+  </p>
+  {% if session.user_id %}
+    {% if recipe.user_id == session.user_id %}
+    <p>
+        <a href="/edit/{{ recipe.id }}">Edit</a> |
+        <a href="/remove/{{ recipe.id }}">Remove</a>
+    </p>
+    {% endif %}
+  {% endif %}
+
+</body>
+
+</html>

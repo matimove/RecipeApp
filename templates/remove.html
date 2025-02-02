@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>RecipeApp</title>
+</head>
+
+<body>
+  <h2>Remove recipe</h2>
+  <form action="/remove/{{ recipe.id }}" method="post">
+    <p>
+      Are you sure you want to remove the recipe? {{recipe.recipe_name}}
+    </p>
+    <input type="submit" name="continue" value="Continue" />
+    <a href="/recipe/{{ recipe.id }}"><button type="button">Cancel</button></a>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RecipeApp</title>
+</head>
+
+<body>
+    <h2>Your Recipes:</h2>
+
+    <hr />
+    {% for recipe in recipes %}
+    <p>
+      <a href="/recipe/{{ recipe.id }}">{{ recipe.recipe_name }}</a>
+    </p>
+    <hr />
+    {% endfor %}
+
+</body>
+
+
+</html>

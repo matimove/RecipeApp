@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>RecipeApp</title>
+</head>
+
+<body>
+  {% if session.username %}
+  <h2>New recipe</h2>
+
+  <form action="/new_recipe" method="post">
+    <p>
+      Name: <br />
+      <input type="text" name="title" />
+    </p>
+    <p>
+      Ingredients: <br />
+      <textarea name="ingredients" rows="5" cols="40"></textarea>
+    </p>
+    <p>
+      Instructions: <br />
+      <textarea name="instructions" rows="5" cols="40"></textarea>
+    </p>
+    <input type="submit" value="Lähetä" />
+  </form>
+  {% endif %}
+</body>
+
+</html>
